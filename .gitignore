@@ -1,0 +1,35 @@
+# Add build artifacts
+outputs/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+venv/
+env/
+ENV/
+
+# Data (if you want to exclude large datasets)
+# data/*.csv
+
+# Keep the docs folder for GitHub Pages
+!docs/

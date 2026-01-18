@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management Portfolio | Data-Driven Analytics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#8b5cf6',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .dark .glass {
+            background: rgba(30, 41, 59, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 min-h-screen transition-colors duration-300">
+    
+    <!-- Theme Toggle -->
+    <div class="fixed top-6 right-6 z-50">
+        <button onclick="toggleTheme()" class="p-3 rounded-full bg-white dark:bg-slate-800 shadow-lg hover:shadow-xl transition-all duration-300">
+            <svg class="w-6 h-6 text-slate-800 dark:text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path class="dark:hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                <path class="hidden dark:block" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Header Section -->
+    <header class="pt-20 pb-16 px-4">
+        <div class="max-w-6xl mx-auto text-center animate-fadeInUp">
+            <div class="inline-block mb-4 px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-semibold">
+                📊 Product Management Portfolio
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 text-slate-900 dark:text-white">
+                Your Name
+            </h1>
+            <p class="text-2xl md:text-3xl gradient-text font-semibold mb-4">
+                Product Management Intern
+            </p>
+            <p class="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-8">
+                Transforming complex data into actionable product strategies that drive measurable business growth
+            </p>
+            <div class="flex gap-4 justify-center">
+                <a href="#insights" class="px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl">
+                    View Insights
+                </a>
+                <a href="#case-study" class="px-8 py-3 bg-white dark:bg-slate-800 text-slate-800 dark:text-white rounded-lg font-semibold hover:bg-slate-50 dark:hover:bg-slate-700 transition-all shadow-lg">
+                    Read Case Study
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Data-Driven Insights Section -->
+    <section id="insights" class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4 text-slate-900 dark:text-white">
+                Data-Driven Insights
+            </h2>
+            <p class="text-center text-slate-600 dark:text-slate-300 mb-12 text-lg">
+                Key findings from comprehensive sales performance analysis
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1: Business Health -->
+                <div class="glass rounded-2xl p-8 card-hover">
+                    <div class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-green-600 dark:text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-slate-900 dark:text-white">Business Health</h3>
+                    <p class="text-slate-600 dark:text-slate-300 mb-6">Strong growth trajectory with optimizing costs</p>
+                    
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-green-500 pl-4">
+                            <div class="text-3xl font-bold text-green-600 dark:text-green-400">17.7%</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">MRR Growth Rate</div>
+                        </div>
+                        <div class="border-l-4 border-blue-500 pl-4">
+                            <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">$109K</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">Total Profit (2024)</div>
+                        </div>
+                        <div class="border-l-4 border-purple-500 pl-4">
+                            <div class="text-3xl font-bold text-purple-600 dark:text-purple-400">19.9%</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">CAC Reduction</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: The Problem -->
+                <div class="glass rounded-2xl p-8 card-hover">
+                    <div class="w-12 h-12 bg-red-100 dark:bg-red-900 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-red-600 dark:text-red-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-slate-900 dark:text-white">The Problem</h3>
+                    <p class="text-slate-600 dark:text-slate-300 mb-6">Regional performance gap identified</p>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-red-50 dark:bg-red-900/20 rounded-lg p-4">
+                            <div class="font-semibold text-slate-900 dark:text-white mb-2">Underperforming Region</div>
+                            <div class="text-2xl font-bold text-red-600 dark:text-red-400">North America</div>
+                        </div>
+                        <div class="bg-orange-50 dark:bg-orange-900/20 rounded-lg p-4">
+                            <div class="font-semibold text-slate-900 dark:text-white mb-2">Root Cause</div>
+                            <div class="text-lg text-slate-700 dark:text-slate-300">Sports & Outdoors</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">25.0% margin vs category avg</div>
+                        </div>
+                        <div class="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-4">
+                            <div class="font-semibold text-slate-900 dark:text-white mb-2">Performance Gap</div>
+                            <div class="text-2xl font-bold text-yellow-600 dark:text-yellow-400">2.14%</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-400">Below Asia (best performer)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: The Solution -->
+                <div class="glass rounded-2xl p-8 card-hover border-2 border-blue-500">
+                    <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600 dark:text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-slate-900 dark:text-white">The Solution</h3>
+                    <p class="text-slate-600 dark:text-slate-300 mb-6">Proposed product feature to unlock growth</p>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg p-6 text-white">
+                            <div class="text-sm font-semibold mb-2 opacity-90">Proposed Feature</div>
+                            <div class="text-2xl font-bold mb-2">Dynamic Pricing Engine</div>
+                            <div class="text-sm opacity-90">ML-based regional price optimization</div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3">
+                                <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">$2,813</div>
+                                <div class="text-xs text-slate-600 dark:text-slate-400">Additional Profit</div>
+                            </div>
+                            <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3">
+                                <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">2.6%</div>
+                                <div class="text-xs text-slate-600 dark:text-slate-400">Profit Increase</div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-slate-600 dark:text-slate-400 italic">
+                            "Implement category-specific pricing strategies in North America"
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Reports Section -->
+    <section id="reports" class="py-16 px-4 bg-white/50 dark:bg-slate-800/50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4 text-slate-900 dark:text-white">
+                Interactive Reports
+            </h2>
+            <p class="text-center text-slate-600 dark:text-slate-300 mb-12 text-lg">
+                Explore the data visualizations that drove these insights
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="reports/sales_trend.html" target="_blank" class="glass rounded-xl p-6 card-hover text-center group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Sales Trends</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Monthly revenue trajectory analysis</p>
+                    <div class="mt-4 text-blue-600 dark:text-blue-400 text-sm font-semibold">
+                        View Report →
+                    </div>
+                </a>
+
+                <a href="reports/regional_performance.html" target="_blank" class="glass rounded-xl p-6 card-hover text-center group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">Regional Performance</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Comparative regional metrics</p>
+                    <div class="mt-4 text-green-600 dark:text-green-400 text-sm font-semibold">
+                        View Report →
+                    </div>
+                </a>
+
+                <a href="reports/category_distribution.html" target="_blank" class="glass rounded-xl p-6 card-hover text-center group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">Category Breakdown</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Product distribution analysis</p>
+                    <div class="mt-4 text-purple-600 dark:text-purple-400 text-sm font-semibold">
+                        View Report →
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Section -->
+    <section id="case-study" class="py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 text-slate-900 dark:text-white">
+                Case Study: Sales Performance Optimization
+            </h2>
+            
+            <div class="space-y-8">
+                <!-- Situation -->
+                <div class="glass rounded-2xl p-8">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span class="text-2xl font-bold text-blue-600 dark:text-blue-300">S</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3 text-slate-900 dark:text-white">Situation</h3>
+                            <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
+                                A global e-commerce brand experiencing plateauing growth needed to identify sales leakage and untapped revenue opportunities across their multi-regional operations. With 12 months of transactional data across three major regions (North America, Europe, Asia) and five product categories, the challenge was to pinpoint specific performance gaps and quantify their business impact.
+                            </p>
+                            <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 border-l-4 border-blue-500">
+                                <p class="text-sm text-slate-700 dark:text-slate-300">
+                                    <strong>Context:</strong> Despite healthy overall revenue ($389K), profit margins varied significantly across regions (27-29%), suggesting optimization opportunities worth exploring.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Task -->
+                <div class="glass rounded-2xl p-8">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span class="text-2xl font-bold text-purple-600 dark:text-purple-300">T</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3 text-slate-900 dark:text-white">Task</h3>
+                            <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
+                                As a Product Manager, my objective was to analyze 138 sales transactions to:
+                            </p>
+                            <ul class="space-y-2 text-slate-700 dark:text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-purple-600 dark:text-purple-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Identify the region with the highest uplift potential</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-purple-600 dark:text-purple-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Calculate key PM metrics: MRR growth, CAC trends, and profit margins</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-purple-600 dark:text-purple-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Determine root causes of underperformance at category level</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-purple-600 dark:text-purple-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Propose data-driven product features to close performance gaps</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action -->
+                <div class="glass rounded-2xl p-8">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span class="text-2xl font-bold text-green-600 dark:text-green-300">A</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3 text-slate-900 dark:text-white">Action</h3>
+                            <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
+                                I built a comprehensive Python analytics pipeline to transform raw sales data into actionable insights:
+                            </p>
+                            <div class="space-y-4">
+                                <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-4">
+                                    <h4 class="font-semibold text-slate-900 dark:text-white mb-2">1. Data Cleaning & Quality Assurance</h4>
+                                    <p class="text-sm text-slate-700 dark:text-slate-300">Handled missing values using category-based median imputation, standardized date formats, and validated data integrity across all dimensions.</p>
+                                </div>
+                                <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-4">
+                                    <h4 class="font-semibold text-slate-900 dark:text-white mb-2">2. Metric Calculation</h4>
+                                    <p class="text-sm text-slate-700 dark:text-slate-300">Computed MRR growth (17.7% avg), CAC trends (19.9% improvement), and regional profit margins to establish performance baseline.</p>
+                                </div>
+                                <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-4">
+                                    <h4 class="font-semibold text-slate-900 dark:text-white mb-2">3. Root Cause Analysis</h4>
+                                    <p class="text-sm text-slate-700 dark:text-slate-300">Identified North America as the primary growth lever with a 2.14% margin gap. Drilled down to discover Sports & Outdoors category underperformance (25% margin vs 29% in Asia).</p>
+                                </div>
+                                <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-4">
+                                    <h4 class="font-semibold text-slate-900 dark:text-white mb-2">4. Interactive Visualization</h4>
+                                    <p class="text-sm text-slate-700 dark:text-slate-300">Created three Plotly dashboards for stakeholder presentations: sales trends, regional comparisons, and category distribution.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Result -->
+                <div class="glass rounded-2xl p-8 border-2 border-green-500">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span class="text-2xl font-bold text-white">R</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3 text-slate-900 dark:text-white">Result</h3>
+                            <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
+                                The analysis uncovered a clear opportunity to drive growth through product optimization. I proposed a <strong>Dynamic Pricing Engine</strong> feature that would:
+                            </p>
+                            
+                            <div class="grid md:grid-cols-2 gap-4 mb-6">
+                                <div class="bg-gradient-to-br from-green-500 to-green-600 rounded-xl p-6 text-white">
+                                    <div class="text-4xl font-bold mb-2">$2,813</div>
+                                    <div class="text-green-100">Additional Annual Profit</div>
+                                </div>
+                                <div class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl p-6 text-white">
+                                    <div class="text-4xl font-bold mb-2">2.6%</div>
+                                    <div class="text-blue-100">Total Profit Increase</div>
+                                </div>
+                            </div>
+
+                            <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border-l-4 border-green-500">
+                                <h4 class="font-bold text-slate-900 dark:text-white mb-3">Proposed Solution: Dynamic Pricing Engine</h4>
+                                <ul class="space-y-2 text-slate-700 dark:text-slate-300 text-sm">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-600 dark:text-green-400 font-bold">•</span>
+                                        <span><strong>ML-based pricing optimization</strong> for Sports & Outdoors in North America</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-600 dark:text-green-400 font-bold">•</span>
+                                        <span><strong>Region-specific pricing strategies</strong> based on willingness-to-pay analysis</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-600 dark:text-green-400 font-bold">•</span>
+                                        <span><strong>A/B testing framework</strong> to validate price sensitivity assumptions</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-600 dark:text-green-400 font-bold">•</span>
+                                        <span><strong>Automated alerts</strong> when regional margins fall below threshold</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="mt-6 pt-6 border-t border-slate-200 dark:border-slate-700">
+                                <p class="text-slate-700 dark:text-slate-300 italic">
+                                    "By closing the 2.14% margin gap between North America and Asia, this feature would unlock nearly $3K in incremental profit while improving customer satisfaction through localized pricing strategies."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="py-16 px-4 bg-white/50 dark:bg-slate-800/50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-slate-900 dark:text-white">
+                Technical Skills Demonstrated
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass rounded-xl p-6">
+                    <h3 class="font-bold text-lg mb-3 text-slate-900 dark:text-white">📊 Analytics</h3>
+                    <ul class="space-y-2 text-slate-700 dark:text-slate-300 text-sm">
+                        <li>• Python (Pandas, Plotly)</li>
+                        <li>• Statistical Analysis</li>
+                        <li>• Data Visualization</li>
+                        <li>• Metrics Definition (MRR, CAC)</li>
+                    </ul>
+                </div>
+                
+                <div class="glass rounded-xl p-6">
+                    <h3 class="font-bold text-lg mb-3 text-slate-900 dark:text-white">🎯 Product Management</h3>
+                    <ul class="space-y-2 text-slate-700 dark:text-slate-300 text-sm">
+                        <li>• Data-Driven Decision Making</li>
+                        <li>• Root Cause Analysis</li>
+                        <li>• Feature Prioritization</li>
+                        <li>• ROI Calculation</li>
+                    </ul>
+                </div>
+                
+                <div class="glass rounded-xl p-6">
+                    <h3 class="font-bold text-lg mb-3 text-slate-900 dark:text-white">💡 Strategic Thinking</h3>
+                    <ul class="space-y-2 text-slate-700 dark:text-slate-300 text-sm">
+                        <li>• Opportunity Identification</li>
+                        <li>• Impact Quantification</li>
+                        <li>• Business Case Development</li>
+                        <li>• Stakeholder Communication</li>
+                    </ul>
+                </div>
+                
+                <div class="glass rounded-xl p-6">
+                    <h3 class="font-bold text-lg mb-3 text-slate-900 dark:text-white">🛠️ Technical</h3>
+                    <ul class="space-y-2 text-slate-700 dark:text-slate-300 text-sm">
+                        <li>• Git/GitHub</li>
+                        <li>• Web Development (HTML/CSS/JS)</li>
+                        <li>• Documentation</li>
+                        <li>• Presentation Design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 bg-slate-900 text-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <h3 class="text-2xl font-bold mb-4">Let's Connect</h3>
+            <p class="text-slate-400 mb-6">Interested in discussing Product Management opportunities or data analytics?</p>
+            <div class="flex gap-4 justify-center mb-8">
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all">
+                    LinkedIn
+                </a>
+                <a href="https://github.com/yourusername" target="_blank" class="px-6 py-3 bg-slate-800 hover:bg-slate-700 rounded-lg font-semibold transition-all">
+                    GitHub
+                </a>
+                <a href="mailto:your.email@example.com" class="px-6 py-3 bg-slate-800 hover:bg-slate-700 rounded-lg font-semibold transition-all">
+                    Email
+                </a>
+            </div>
+            <p class="text-slate-500 text-sm">
+                © 2026 Product Management Portfolio | Built with data-driven insights
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Theme toggle functionality
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        }
+
+        // Load saved theme
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Animate on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-hover').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
