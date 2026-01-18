@@ -13,7 +13,7 @@ from datetime import datetime
 import os
 
 # Configuration
-DATA_FILE = 'data/sample_sales_data.csv'
+DATA_FILE = 'data/Global_Superstore2.csv'
 OUTPUT_DIR = 'outputs/'
 
 def load_and_clean_data(file_path):
@@ -27,12 +27,22 @@ def load_and_clean_data(file_path):
         Cleaned pandas DataFrame
     """
     print("📊 Loading sales data...")
-    df = pd.read_csv(file_path)
+    df = pd.read_csv(file_path, encoding='latin-1')  # Handle encoding issues
     
     print(f"Initial dataset: {len(df)} rows, {len(df.columns)} columns")
     
     # Data cleaning steps
     print("\n🧹 Cleaning data...")
+    
+    # Standardize column names based on dataset
+    if 'Order Date' in df.columns:
+        # Global Superstore format
+        df = df.rename(columns={
+            'Order Date': 'Date',
+            'Sales': 'Sales_Amount',
+            'Category': 'Product_Category',
+            'Customer ID': 'Customer_ID'
+        })
     
     # Convert date column to datetime
     df['Date'] = pd.to_datetime(df['Date'], errors='coerce')
@@ -522,14 +532,14 @@ def generate_pm_insights(df, metrics, customer_insights):
         print(f"   Analysis shows opportunity to segment customers by purchase frequency")
         print(f"   Recommendation: Implement tiered loyalty programs to optimize margin per segment")
     
-    print(f"\n\n🎯 SALESCODE.AI-ALIGNED FEATURE PROPOSAL:")
+    print(f"\n\n🎯 AI-POWERED FEATURE PROPOSAL:")
     print(f"   Feature: AI-Powered Discount Optimizer")
     print(f"   Problem: Need to balance customer retention with profit margin optimization")
     print(f"   Solution: ML model to optimize discount levels per customer segment")
     print(f"   Expected Impact:")
     print(f"   - Maintain customer loyalty and revenue contribution")
     print(f"   - Recover 2-3% margin points = ~${(df['Profit'].sum() * 0.025):,.0f} additional profit")
-    print(f"   - Directly supports SalesCode's 'guaranteed sales uplift' mission")
+    print(f"   - Scalable solution for enterprise e-commerce brands")
     
     print("\n" + "="*70)
 
