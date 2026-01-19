@@ -22,20 +22,20 @@ sales-analytics-dashboard/
 └── PRESENTATION_GUIDE.md       # Complete presentation notes and key metrics
 ```
 
-## 💡 Key Highlights
+##  Key Highlights
 
 - **Scope:** 51,290 transactions | 1,590 customers | 13 regions | 4 years (2011-2014)
 - **Opportunity Identified:** $217K profit potential (14.8% increase)
 - **Key Insight:** Southeast Asia Furniture segment at -2.3% margin vs 26.6% benchmark
 - **Customer Analysis:** Top 20% of customers drive 43.5% of revenue
 
-## 📊 What's Inside
+##  What's Inside
 
 - **Homepage:** Complete case study with STAR methodology
 - **Interactive Reports:** 4 dynamic Plotly visualizations with hover details
 - **Presentation Guide:** Ready-to-use talking points, metrics, and interview responses
 
-## 🎯 Skills Demonstrated
+##  Skills Demonstrated
 
 ✅ Data Analysis (51K+ records)  
 ✅ Business Metrics (MRR, CAC, Margin Analysis)  
@@ -45,7 +45,7 @@ sales-analytics-dashboard/
 ✅ Data Visualization  
 ✅ Impact Quantification
 
-## 📧 Contact
+## Contact
 
 **Donil Jaison**  
 Email: donil.j23@iiits.in  
